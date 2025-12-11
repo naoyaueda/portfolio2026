@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed bg-dark-900/95 items-center top-0 w-full h-auto z-50 px-6 py-3 backdrop-blur-custom"
+        className="fixed bg-dark-900/95 items-center top-0 w-full h-auto z-50 px-6 py-2 backdrop-blur-custom"
       >
         <div className="text-sm flex justify-between items-center">
           <Link to="/" className='text-sm text-white'>

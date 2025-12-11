@@ -154,7 +154,7 @@ const Connect = () => {
       
       className="bg-dark-800 relative py-32 px-6 bg-gradient-to-b overflow-hidden"
     >
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -185,7 +185,7 @@ const Connect = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-dark-900 rounded-3xl p-4 sm:p-6 lg:p-8"
+            className="bg-dark-900 rounded-3xl p-6"
           >
             <h3 className="text-2xl font-display mb-8" >
               Let's explore how we can collaborate.

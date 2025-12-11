@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero">
+    <section id="hero" className='bg-dark-900'>
     <div className="py-32 container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen items-center justify-center">
       <div className='space-y-6'>
       <motion.h2 
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
-        className="text-lg md:text-xl text-light-300"
+        className="text-lg md:text-xl text-light-100"
       >
         Multimedia design and development for better user-centered digital experiences.
       </motion.div>
@@ -33,12 +33,12 @@ const Hero: React.FC = () => {
         <motion.button
           whileHover={{ 
             scale: 1.05,
-            borderColor: "#ffff00",
-            color: "#ffff00"
+            borderColor: "#E1FB4B",
+            color: "#E1FB4B"
           }}
           whileTap={{ scale: 0.95 }}
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mr-4 px-6 py-3 border border-light-500 text-light-400  rounded-full transition-all duration-300"
+          className="mr-4 px-6 py-3 border border-light-500 text-light-100  rounded-full transition-all duration-300"
         >
           <span>About</span>
         </motion.button>
@@ -46,12 +46,12 @@ const Hero: React.FC = () => {
         <motion.button
           whileHover={{ 
             scale: 1.05,
-            borderColor: "#ffff00",
-            color: "#ffff00"
+            borderColor: "#E1FB4B",
+            color: "#E1FB4B"
           }}
           whileTap={{ scale: 0.95 }}
           onClick={() => document.getElementById('expertise')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mr-4 px-6 py-3 border border-light-500 text-light-400  rounded-full transition-all duration-300"
+          className="mr-4 px-6 py-3 border border-light-500 text-light-100  rounded-full transition-all duration-300"
         >
           <span>Expertise</span>
         </motion.button>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           onHoverStart={() => {}}
           onHoverEnd={() => {}}
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mr-4 px-6 py-3 border border-light-500 hover:bg-yellow-500/80 text-light-400 hover:text-dark-900 rounded-full overflow-hidden group duration-300"
+          className="mr-4 px-6 py-3 border border-light-500 hover:border-yellow-500 hover:bg-yellow-500/80 text-light-100 hover:text-dark-900 rounded-full overflow-hidden group duration-300"
         >
           <span className="relative z-10">My Projects</span>
         </motion.button>
@@ -73,12 +73,12 @@ const Hero: React.FC = () => {
         <motion.button
           whileHover={{ 
             scale: 1.05,
-            borderColor: "#ffff00",
-            color: "#ffff00"
+            borderColor: "#E1FB4B",
+            color: "#E1FB4B"
           }}
           whileTap={{ scale: 0.95 }}
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-6 py-3 border border-light-500 text-light-400  rounded-full transition-all duration-300"
+          className="px-6 py-3 border border-light-500 text-light-100  rounded-full transition-all duration-300"
         >
           <span>Contact</span>
         </motion.button>
@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
           >
             {/* Chevron down icon */}
             <svg 
-              className="w-8 h-8 text-gray-400 mx-auto" 
+              className="w-8 h-8 text-light-300 mx-auto" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             transition={{ delay: 1.5, duration: 0.5 }}
-            className="text-sm text-gray-300 mt-4 tracking-widest uppercase"
+            className="text-sm text-light-100 mt-4 tracking-widest uppercase"
           >
             Scroll
           </motion.p>
