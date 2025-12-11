@@ -44,11 +44,12 @@ const Navbar: React.FC = () => {
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed bg-dark-900/50 h-auto items-center top-0 w-full z-50 py-2 px-4 backdrop-blur-custom"
+        className="fixed bg-dark-900/95 items-center top-0 w-full h-auto z-50 px-6 py-3 backdrop-blur-custom"
       >
-        <div className="h-auto mx-auto text-sm flex justify-between items-center">
-          <Link to="/" className='uppercase'>Naoya Ueda</Link>
-
+        <div className="text-sm flex justify-between items-center">
+          <Link to="/" className='text-sm text-white'>
+            Naoya Ueda
+          </Link>
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 text-gray-400">
             {navLinks.map((link) => (
@@ -107,7 +108,7 @@ const Navbar: React.FC = () => {
                 <motion.div key={link.path} variants={linkVariants} className="my-4">
                   <Link
                     to={link.path}
-                    className={`text-4xl font-display text-gray-300 hover:text-yellow-500 transition-colors ${location.pathname === link.path ? 'text-yellow-500' : ''}`}
+                    className={`text-4xl font-display text-light-100 hover:text-accent-yellow transition-colors ${location.pathname === link.path ? 'text-accent-yellow' : ''}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
