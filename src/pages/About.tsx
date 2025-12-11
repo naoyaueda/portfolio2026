@@ -44,7 +44,7 @@ const About: React.FC = () => {
   ]
   return (
     <section id="about" className="bg-dark-800">
-      <div className="container mx-auto px-6 py-32">
+      <div className="max-w-7xl mx-auto px-6 py-32">
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const About: React.FC = () => {
             className="flex-none md:flex-1 space-y-6"
           >
           <div className="text-light-200 leading-relaxed">
-            I’m a multimedia designer and developer focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.
+            Focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.
           </div>
           <div className="text-light-200 leading-relaxed">
             I specialize in mobile-first design, intuitive UI/UX, and efficient digital workflows that make websites not only look great but work seamlessly. Fluent in English and Japanese, I thrive on building solutions that connect diverse audiences and deliver real-world impact.
@@ -125,7 +125,7 @@ const About: React.FC = () => {
                       {job.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="px-2 py-1 text-yellow-400 text-xs rounded-full border border-yellow-500/20"
+                          className="px-2 py-1 text-yellow-500 text-xs rounded-full border border-yellow-500/20"
                         >
                           {skill}
                         </span>

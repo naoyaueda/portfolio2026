@@ -149,7 +149,7 @@ const Work = () => {
               className="inset-0 w-full h-auto object-cover brightness-75 group-hover:brightness-100 filter grayscale transition-all duration-500 group-hover:grayscale-0"
             />
             <div className="absolute top-4 left-4">
-              <span className="inline-block px-3 py-1 bg-dark-900 rounded-full backdrop-blur-sm">
+              <span className="inline-block px-3 py-1 bg-dark-800 rounded-full backdrop-blur-sm">
                 <span className="text-yellow-400 group-hover:text-yellow-500 text-xs  uppercase tracking-wider">
                   {project.category}
                 </span>
@@ -158,13 +158,13 @@ const Work = () => {
           </div>
 
           {/* Bottom half - Text content */}
-          <div className="flex-1 bg-dark-900 p-6 flex flex-col justify-between">
+          <div className="flex-1 bg-dark-800 p-6 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-display  text-light-100 mb-3 transition-colors duration-300">
                 {project.title}
               </h3>
               
-              <p className="text-light-300 text-sm leading-relaxed mb-4">
+              <p className="text-light-200 text-sm leading-relaxed mb-4">
                 {project.intro}
               </p>
             </div>
@@ -183,7 +183,7 @@ const Work = () => {
 
             {/* Buttons - shown on hover */}
             <div className="flex space-x-3 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <button className="px-4 py-2 bg-yellow-500 text-dark-900 rounded-full text-sm hover:bg-yellow-400 transition-colors">
+              <button className="px-4 py-2 font-medium bg-yellow-500 text-dark-900 rounded-full text-sm hover:bg-yellow-400 transition-colors">
                 View Project
               </button>
             </div>
@@ -202,14 +202,14 @@ const Work = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-dark-800/90 backdrop-blur-md flex items-center justify-center p-8"
+        className="fixed inset-0 z-50 bg-light-100/10 backdrop-blur-md flex items-center justify-center p-8"
         onClick={() => setSelectedProject(null)}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
-          className="bg-dark-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-dark-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
           onClick={(e: React.MouseEvent) => e.stopPropagation()} // Type 'e'
         >
           <div className="p-8">
@@ -255,7 +255,7 @@ const Work = () => {
                     href={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 bg-yellow-500 text-dark-900 rounded-full"
+                    className="px-6 py-3 bg-yellow-500 text-dark-900 font-medium rounded-full"
                   >
                     <motion.button
                       whileHover={{ scale: 1.05 }}
@@ -275,7 +275,7 @@ const Work = () => {
   };
 
   return (
-    <section id="projects" className="py-32 px-6 bg-dark-800 overflow-hidden">
+    <section id="projects" className="py-32 px-6 bg-dark-900 overflow-hidden">
 
       <div className="container mx-auto relative z-10">
         {/* Section header */}
@@ -292,7 +292,7 @@ const Work = () => {
           </h2>
           </div>
           <div className="col-right">
-          <p className="text-gray-400 mb-8">
+          <p className="text-dark-200 mb-8">
             Explore my latest projects showcasing expertise in graphic and web design & development.
           </p>
           {/* Filter buttons */}
@@ -303,10 +303,10 @@ const Work = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setFilter(category)}
-                className={`px-6 py-2 rounded-full  transition-all duration-300 ${
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   filter === category
-                    ? 'bg-yellow-500 text-dark-900'
-                    : 'text-light-300 hover:text-yellow-500'
+                    ? 'bg-yellow-500 text-dark-900 font-medium'
+                    : 'text-light-200 hover:text-yellow-500'
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}

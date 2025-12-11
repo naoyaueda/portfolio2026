@@ -29,15 +29,15 @@ const Intro: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-32 px-6 bg-dark-800 min-h-screen flex items-center">
-      <div className="container mx-auto">
+    <section id="about" className="py-32 px-6 bg-dark-800 border-b-2 border-dark-900 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl md:text-6xl text-gradient-3d uppercase mb-20">About Me</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-18 items-center"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-18 items-end"
         >
           <motion.div
             variants={itemVariants}
@@ -57,7 +57,8 @@ const Intro: React.FC = () => {
                     >
                       <div><img src={avatar} alt='my avatar'/></div>
                     </motion.div>
-                    <div className="text-light-100 text-lg ">Naoya Ueda</div><div className='text-light-300 text-sm'>Multimedia Designer & Developer</div>
+                    <div className="text-lg">Naoya Ueda</div>
+                    <div className="text-sm">Multimedia Designer & Developer</div>
                   </div>
                 </div>
               </motion.div>
@@ -78,9 +79,10 @@ const Intro: React.FC = () => {
           <motion.div variants={itemVariants} className="space-y-6">
             
             
-            <div className="text-light-300 leading-relaxed">
+            <div className="leading-relaxed">
+              <div className='text-xl mb-4'>What I do</div>
               <p>
-                I’m a multimedia designer and developer focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.
+                Focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.
               </p>
             </div>
             </motion.div>
@@ -88,7 +90,7 @@ const Intro: React.FC = () => {
             <motion.div 
               variants={itemVariants}
             >
-              <h3 className="text-xl font-light text-yellow-400 mb-4">Core Skills</h3>
+              <h3 className="text-xl font-light text-yellow-500 mb-4">Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <motion.span
@@ -97,7 +99,7 @@ const Intro: React.FC = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ scale: 1.1, rotate: 2 }}
-                    className="px-4 py-2 bg-dark-800 border border-gray-500/30 rounded-lg text-sm text-light-300 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200"
+                    className="px-4 py-2 bg-dark-800 border border-gray-500/30 rounded-lg text-sm text-light-200 hover:border-yellow-500 hover:text-yellow-500 transition-all duration-200"
                   >
                     {skill}
                   </motion.span>

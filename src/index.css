@@ -102,6 +102,15 @@
     -webkit-text-fill-color: transparent;
     animation: gradient-shift 3s ease infinite;
   }
+
+  .text-gradient-3d-dark {
+    background: linear-gradient(135deg, #ffffff 0%, #666666 25%, #111111 50%, #ffffff 75%, #666666 100%);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+  }
   
   /* Serif-specific enhancements */
   .font-serif {

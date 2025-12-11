@@ -9,16 +9,15 @@ module.exports = {
     extend: {
       colors: {
         yellow: {
-          50: '#fef9c3',   // Very light shiny yellow
-          100: '#fef08a',  // Light shiny yellow
-          200: '#fde047',  // Lighter shiny yellow
-          300: '#facc15',  // Medium light shiny yellow
-          400: '#eab308',  // Medium shiny yellow
-          500: '#ffff00',  // MAIN BRIGHT SHINY YELLOW
-          600: '#ffff00',  // Same bright shiny yellow (buttons, links)
-          700: '#ffff00',  // Same bright shiny yellow
-          800: '#ffff00',  // Same bright shiny yellow
-          900: '#ffff00',  // Same bright shiny yellow
+          100: '#FAFFEB',
+          200: '#F4FFD0',
+          300: '#EEFE9C',
+          400: '#E7FD75',
+          500: '#E1FB4B',  // MAIN BRIGHT SHINY YELLOW
+          600: '#9ABC32',
+          700: '#7A9520',
+          800: '#5A6F13',
+          900: '#3A4A09',
         },
         dark: {
           900: '#1c1c1c',  
@@ -34,7 +33,7 @@ module.exports = {
           500: '#6e6e6e',
         },
         accent: {
-          'yellow': '#ffff00',
+          'yellow': '#E1FB4B',
           'blue': '#6366f1',
           'cyan': '#00ffff',
           'magenta': '#ff00ff',

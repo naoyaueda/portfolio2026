@@ -152,7 +152,7 @@ const Connect = () => {
     <section 
       id="contact" 
       
-      className="bg-dark-900 relative py-32 px-6 bg-gradient-to-b overflow-hidden"
+      className="bg-dark-800 relative py-32 px-6 bg-gradient-to-b overflow-hidden"
     >
       <div className="container mx-auto relative z-10">
         {/* Section header */}
@@ -166,7 +166,7 @@ const Connect = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl">
             <span className="text-gradient-3d uppercase">Connect <br/>with me.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-light-300 flex items-center">
+          <p className="text-lg sm:text-xl text-light-200 flex items-center">
             From complete web design and development to intuitive UI/UX, branding strategy, and technical consulting, I help bring your ideas to life with clarity and impact.
           </p>
           </div>
@@ -185,9 +185,9 @@ const Connect = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-dark-800 rounded-3xl p-4 sm:p-6 lg:p-8"
+            className="bg-dark-900 rounded-3xl p-4 sm:p-6 lg:p-8"
           >
-            <h3 className="text-2xl font-display  text-light-100 mb-8" >
+            <h3 className="text-2xl font-display mb-8" >
               Let's explore how we can collaborate.
             </h3>
             
@@ -237,7 +237,7 @@ const Connect = () => {
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-500 focus:outline-none focus:ring-2 transition-all duration-300 ${
+                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
                         error && !formData.name.trim() 
                           ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
                           : 'border-gray-500/30 focus:border-yellow-400 focus:ring-yellow-400/20'
@@ -256,7 +256,7 @@ const Connect = () => {
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-500 focus:outline-none focus:ring-2 transition-all duration-300 ${
+                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
                         error && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
                           ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
                           : 'border-dark-600/30 focus:border-yellow-400 focus:ring-yellow-400/20'
@@ -273,7 +273,7 @@ const Connect = () => {
                     value={formData.projectType}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-dark-700 border border-gray-500/30 rounded-xl text-white focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 disabled:opacity-50"
+                    className="w-full px-4 py-3 bg-dark-700 border border-gray-500/30 rounded-xl text-light-100 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 disabled:opacity-50"
                   >
                     <option value="">Select Project Type</option>
                     {projectTypes.map(type => (
@@ -292,7 +292,7 @@ const Connect = () => {
                     rows={6}
                     minLength={10}
                     maxLength={1000}
-                    className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-500 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
+                    className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
                       error && (formData.message.length < 10 || formData.message.length > 1000)
                         ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
                         : 'border-gray-500/30 focus:border-yellow-400 focus:ring-yellow-400/20'
@@ -330,7 +330,7 @@ const Connect = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-dark-800 rounded-3xl p-6 sm:p-8 lg:p-10">
+            <div className="bg-dark-900 rounded-3xl p-6 sm:p-8 lg:p-10">
               <h3 className="text-2xl font-display text-light-100 mb-8">
                 Connect Directly
               </h3>
@@ -342,9 +342,9 @@ const Connect = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center rounded-full pr-4 hover:bg-dark-600/10 transition-all duration-300 group"
+                    className="flex items-center rounded-full pr-4 hover:bg-dark-700 transition-all duration-300 group"
                   >
-                    <div className="text-sm bg-dark-600/20 rounded-full p-3 mr-3">
+                    <div className="text-sm bg-dark-700 rounded-full p-3 mr-3">
                       {link.icon}
                     </div>
                     <div className="flex-1 text-light-300 group-hover:text-white transition-colors">
@@ -367,18 +367,18 @@ const Connect = () => {
             className="mt-12 sm:mt-16"
           >
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-3 h-3 bg-yellow-500 rounded-full animate-ping" />
               <h4 className="text-2xl sm:text-3xl text-light-100">Open for Opportunities</h4>
+              <div className="w-3 h-3 bg-yellow-500 rounded-full animate-ping" />
             </div>
             
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-3 py-1 bg-dark-800 text-light-300 rounded-full text-sm">
+              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
                 Remote Friendly
               </span>
-              <span className="px-3 py-1 bg-dark-800 text-light-300 rounded-full text-sm">
+              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
                 Full-time Available
               </span>
-              <span className="px-3 py-1 bg-dark-800 text-light-300 rounded-full text-sm">
+              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
                 Global Clients
               </span>
             </div>

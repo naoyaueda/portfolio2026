@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-32 container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen items-center justify-center">
+    <section id="hero">
+    <div className="py-32 container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen items-center justify-center">
       <div className='space-y-6'>
       <motion.h2 
         initial={{ scale: 0.5, opacity: 0 }}
@@ -124,6 +125,7 @@ const Hero: React.FC = () => {
             Scroll
           </motion.p>
         </motion.div>
+      </div>
       </div>
     </section>
   );

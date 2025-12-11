@@ -116,7 +116,7 @@ const Expertise = () => {
         onClick={() => setActiveSkill(activeSkill === skill.name ? null : skill.name)}
       >
         <div className="flex justify-between items-center mb-2">
-          <span className="text-light-300 ">{skill.name}</span>
+          <span className="text-light-100 ">{skill.name}</span>
           <motion.span 
             className="text-yellow-400 font-mono text-sm"
             animate={{ opacity: isHovered ? [1, 0.5, 1] : 1 }}
@@ -126,7 +126,7 @@ const Expertise = () => {
           </motion.span>
         </div>
         
-        <div className="relative h-0.5 bg-dark-900 rounded-full overflow-hidden">
+        <div className="relative h-0.5 bg-dark-600 rounded-full overflow-hidden">
           <motion.div
             className="absolute top-0 left-0 h-full bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full"
             initial={{ width: 0 }}
@@ -150,7 +150,7 @@ const Expertise = () => {
     <section 
       id="expertise" 
       
-      className="bg-dark-900 relative px-6 py-32 bg-gradient-to-b overflow-hidden"
+      className="bg-dark-800 relative px-6 py-32 bg-gradient-to-b overflow-hidden"
     >
 
       <div className="container mx-auto relative z-10">
@@ -167,7 +167,7 @@ const Expertise = () => {
             <h2 className="text-5xl md:text-6xl mb-6">
             <span className="text-gradient-3d uppercase">Technical<br/>Expertise</span>
           </h2>
-          <p className="text-lg md:text-xl text-light-300">
+          <p className="text-lg md:text-xl text-light-200">
             Comprehensive skill set spanning frontend development, backend architecture, and creative design. 
             Constantly evolving with cutting-edge technologies.
           </p>
@@ -180,7 +180,7 @@ const Expertise = () => {
           viewport={{ once: true }}
           className="relative w-full lg:px-16"
         >
-          <div className="bg-dark-800 rounded-3xl p-8">
+          <div className="bg-dark-900 rounded-3xl p-8">
             <h3 className="text-3xl font-display  text-light-100 mb-8 text-center">
               Proficiency Overview
             </h3>
@@ -222,18 +222,18 @@ const Expertise = () => {
                       />
                       <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#facc15" />
-                          <stop offset="100%" stopColor="#ffff00" />
+                          <stop offset="0%" stopColor="#3A4A09" />
+                          <stop offset="100%" stopColor="#E1FB4B" />
                         </linearGradient>
                       </defs>
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl  text-light-300">
+                      <span className="text-2xl  text-light-100">
                         {Math.round(category.skills.reduce((acc, skill) => acc + skill.level, 0) / category.skills.length)}%
                       </span>
                     </div>
                   </div>
-                  <p className="text-light-300 ">{category.category}</p>
+                  <p className="text-light-100 ">{category.category}</p>
                 </motion.div>
               ))}
             </div>
@@ -257,12 +257,12 @@ const Expertise = () => {
               key={category.category}
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="bg-dark-800 rounded-3xl p-4 md:p-8"
+              className="bg-dark-900 rounded-3xl p-4 md:p-8"
             >
               {/* Category header */}
               <div className="flex items-center space-x-4 mb-8">
                 <div>
-                  <h3 className="text-2xl font-display  text-light-100">
+                  <h3 className="text-2xl font-display text-light-100">
                     {category.category}
                   </h3>
                 </div>
