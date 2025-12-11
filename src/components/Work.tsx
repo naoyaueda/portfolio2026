@@ -132,7 +132,7 @@ const Work = () => {
           damping: 15
         }}
         whileHover={{
-          boxShadow: "0 20px 40px rgba(255, 255, 0, 0.3)",
+          boxShadow: "0 20px 40px rgba(225, 251, 75, 0.3)",
           y: -5
         }}
         className="relative group cursor-pointer rounded-3xl overflow-hidden"
@@ -221,7 +221,7 @@ const Work = () => {
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="text-2xl text-gray-400 hover:text-yellow-500 transition-colors"
+                className="text-2xl text-dark-300 hover:text-yellow-500 transition-colors"
               >
                 ✕
               </button>
@@ -235,11 +235,11 @@ const Work = () => {
               />
             </div>
 
-            <div className="text-light-400 mb-5">{selectedProject.description}</div>
+            <div className="text-light-100 mb-5">{selectedProject.description}</div>
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-xl text-white mb-3">Core Skills</h4>
+                <h4 className="text-xl text-light-100 mb-3">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tech.map((tech: string) => ( // Type 'tech'
                     <span key={tech} className="px-3 py-1 border border-yellow-400 text-yellow-400 rounded-full text-sm">

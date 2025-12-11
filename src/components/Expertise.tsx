@@ -153,7 +153,7 @@ const Expertise = () => {
       className="bg-dark-800 relative px-6 py-32 bg-gradient-to-b overflow-hidden"
     >
 
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -222,8 +222,8 @@ const Expertise = () => {
                       />
                       <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#3A4A09" />
-                          <stop offset="100%" stopColor="#E1FB4B" />
+                          <stop offset="0%" stopColor="#E1FB4B" />
+                          <stop offset="100%" stopColor="#3A4A09" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -257,7 +257,7 @@ const Expertise = () => {
               key={category.category}
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="bg-dark-900 rounded-3xl p-4 md:p-8"
+              className="bg-dark-900 rounded-3xl p-6"
             >
               {/* Category header */}
               <div className="flex items-center space-x-4 mb-8">
