@@ -164,7 +164,7 @@ const Connect = () => {
         >
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
           <h2 className="text-4xl sm:text-5xl md:text-6xl">
-            <span className="text-gradient-3d uppercase">Connect <br/>with me.</span>
+            <span className="text-gradient-3d uppercase font-bold">Connect <br/>with me.</span>
           </h2>
           <p className="text-lg sm:text-xl text-light-200 flex items-center">
             From complete web design and development to intuitive UI/UX, branding strategy, and technical consulting, I help bring your ideas to life with clarity and impact.
@@ -385,19 +385,19 @@ const Connect = () => {
             
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 text-light-300'>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-400 pl-4'>Web Development</h5>
+                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>Web Development</h5>
                 <p className='text-sm leading-relaxed'>Full-stack development, UI/UX design, and technical consulting from concept to deployment.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-400 pl-4'>Brand Identity</h5>
+                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>Brand Identity</h5>
                 <p className='text-sm leading-relaxed'>Unique logos and brand identities that resonate with your target audience.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-400 pl-4'>WordPress Development</h5>
+                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>WordPress Development</h5>
                 <p className='text-sm leading-relaxed'>Custom themes tailored to your needs with engaging user experiences.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-400 pl-4'>AI Integration</h5>
+                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>AI Integration</h5>
                 <p className='text-sm leading-relaxed'>Leveraging AI to create innovative solutions and reach new possibilities.</p>
               </div>
             </div>

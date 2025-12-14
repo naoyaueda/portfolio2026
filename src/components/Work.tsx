@@ -160,7 +160,7 @@ const Work = () => {
           {/* Bottom half - Text content */}
           <div className="flex-1 bg-dark-800 p-6 flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-display  text-light-100 mb-3 transition-colors duration-300">
+              <h3 className="text-2xl font-display font-bold text-light-100 mb-3 transition-colors duration-300">
                 {project.title}
               </h3>
               
@@ -183,7 +183,7 @@ const Work = () => {
 
             {/* Buttons - shown on hover */}
             <div className="flex space-x-3 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <button className="px-4 py-2 font-medium bg-yellow-500 text-dark-900 rounded-full text-sm hover:bg-yellow-400 transition-colors">
+              <button className="px-4 py-2 font-semibold bg-yellow-500 text-dark-900 rounded-full text-sm hover:bg-yellow-400 transition-colors">
                 View Project
               </button>
             </div>
@@ -215,7 +215,7 @@ const Work = () => {
           <div className="p-8">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-3xl font-display text-light-100 mb-2">
+                <h3 className="text-3xl font-display text-light-100 mb-2 font-bold">
                   {selectedProject.title}
                 </h3>
               </div>
@@ -260,7 +260,7 @@ const Work = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full h-full bg-transparent text-dark-900"
+                      className="w-full h-full bg-transparent text-dark-900 font-semibold"
                     >
                       View Live Project
                     </motion.button>
@@ -288,7 +288,7 @@ const Work = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
           <div className="col-left">
           <h2 className="text-5xl md:text-6xl">
-            <span className="text-gradient-3d uppercase">Featured<br/>Projects</span>
+            <span className="text-gradient-3d uppercase font-bold">Featured<br/>Projects</span>
           </h2>
           </div>
           <div className="col-right">

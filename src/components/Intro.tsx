@@ -31,7 +31,7 @@ const Intro: React.FC = () => {
   return (
     <section id="about" className="py-32 px-6 bg-dark-800 border-b-2 border-dark-900 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl md:text-6xl text-gradient-3d uppercase mb-16">About Me</h2>
+        <h2 className="text-5xl md:text-6xl text-gradient-3d uppercase mb-16 font-bold">About Me</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -64,7 +64,7 @@ const Intro: React.FC = () => {
             
           </motion.div>
             <motion.div variants={itemVariants} className='space-y-4'>
-              <div className='text-lg'>Naoya Ueda</div>
+              <div className='text-lg font-bold'>Naoya Ueda</div>
               <div>Multimedia Designer & Developer</div>
               <p>Focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.</p>
               <h3 className="text-lg text-yellow-500">Core Skills</h3>

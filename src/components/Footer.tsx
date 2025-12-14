@@ -35,7 +35,7 @@ const Footer = () => {
             className="md:col-span-2 space-y-1"
           >
             <div className="flex items-center">
-                <span className='text-light-100 text-xl'>Naoya Ueda</span>
+                <span className='text-light-100 text-xl font-bold'>Naoya Ueda</span>
             </div>
             <div className="text-light-200 text-sm">
               Multimedia Design & Development.
