@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="text-5xl lg:text-7xl text-light-100"
+        className="text-5xl lg:text-7xl text-light-100 font-bold"
       >
         Design with Purpose, Build with <span className='text-accent-yellow'>Clarity</span>.
       </motion.h2>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           onHoverStart={() => {}}
           onHoverEnd={() => {}}
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mr-4 px-6 py-3 border border-light-500 hover:border-yellow-500 hover:bg-yellow-500/80 text-light-100 hover:text-dark-900 rounded-full overflow-hidden group duration-300"
+          className="mr-4 px-6 py-3 border border-light-500 hover:border-yellow-500 hover:bg-yellow-500 text-light-100 hover:text-dark-900 rounded-full overflow-hidden group duration-300 hover:font-semibold"
         >
           <span className="relative z-10">My Projects</span>
         </motion.button>

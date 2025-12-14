@@ -165,7 +165,7 @@ const Expertise = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-full items-center'>
           <div className="col-left">
             <h2 className="text-5xl md:text-6xl mb-6">
-            <span className="text-gradient-3d uppercase">Technical<br/>Expertise</span>
+            <span className="text-gradient-3d uppercase font-bold">Technical<br/>Expertise</span>
           </h2>
           <p className="text-lg md:text-xl text-light-200">
             Comprehensive skill set spanning frontend development, backend architecture, and creative design. 
@@ -181,7 +181,7 @@ const Expertise = () => {
           className="relative w-full lg:px-16"
         >
           <div className="bg-dark-900 rounded-3xl p-8">
-            <h3 className="text-3xl font-display  text-light-100 mb-8 text-center">
+            <h3 className="text-3xl font-display font-bold text-light-100 mb-8 text-center">
               Proficiency Overview
             </h3>
             
@@ -262,7 +262,7 @@ const Expertise = () => {
               {/* Category header */}
               <div className="flex items-center space-x-4 mb-8">
                 <div>
-                  <h3 className="text-2xl font-display text-light-100">
+                  <h3 className="text-2xl font-display text-light-100 font-bold">
                     {category.category}
                   </h3>
                 </div>

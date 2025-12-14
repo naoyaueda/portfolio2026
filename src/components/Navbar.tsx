@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
         className="fixed bg-dark-900/95 items-center top-0 w-full h-auto z-50 px-6 py-2 backdrop-blur-custom"
       >
         <div className="text-sm flex justify-between items-center">
-          <Link to="/" className='text-sm text-white'>
+          <Link to="/" className='text-sm text-white font-bold'>
             Naoya Ueda
           </Link>
           {/* Desktop Menu */}
