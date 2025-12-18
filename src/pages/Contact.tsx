@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen text-white overflow-x-hidden">
-        <Connect />
+      <Connect />
       <Footer />
     </div>
   );

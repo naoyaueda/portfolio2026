@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, Transition, Variants } from 'framer-motion';
 
 // Define types for Skill
@@ -67,7 +67,7 @@ const Expertise = () => {
         { name: "AI, LLM, CLI", level: 95 },
         { name: "Microsoft 365", level: 90 },
         { name: "Google Workspace", level: 80 },
-        { name: "Language: English, Japanese, Chinese", level: 90 },
+        { name: "English & Japanese", level: 90 },
      ]
     },
   ];
@@ -98,6 +98,39 @@ const Expertise = () => {
     },
   };
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isScrollable, setIsScrollable] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const checkScrollability = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollWidth, clientWidth, scrollLeft } = container;
+      setIsScrollable(scrollWidth > clientWidth);
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+    return () => window.removeEventListener('resize', checkScrollability);
+  }, []);
+
+  const scroll = (direction: 'left' | 'right') => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const cardWidth = container.firstElementChild?.clientWidth || 0;
+      const scrollAmount = cardWidth * 1;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const SkillBar: React.FC<SkillBarProps> = ({ skill, index }) => {
     const [isHovered, setIsHovered] = useState(false);
     const barRef = useRef<HTMLDivElement>(null); // Type for useRef
@@ -116,9 +149,9 @@ const Expertise = () => {
         onClick={() => setActiveSkill(activeSkill === skill.name ? null : skill.name)}
       >
         <div className="flex justify-between items-center mb-2">
-          <span className="text-light-100 ">{skill.name}</span>
+          <span className="text-mono-100 ">{skill.name}</span>
           <motion.span 
-            className="text-yellow-400 font-mono text-sm"
+            className="text-accent-sky font-mono text-sm"
             animate={{ opacity: isHovered ? [1, 0.5, 1] : 1 }}
             transition={{ duration: 1, repeat: isHovered ? Infinity : 0 }}
           >
@@ -126,9 +159,9 @@ const Expertise = () => {
           </motion.span>
         </div>
         
-        <div className="relative h-0.5 bg-dark-600 rounded-full overflow-hidden">
+        <div className="relative h-0.5 bg-mono-900 rounded-full overflow-hidden">
           <motion.div
-            className="absolute top-0 left-0 h-full bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full"
+            className="absolute top-0 left-0 h-full bg-gradient-to-r from-accent-sky/50 to-accent-sky rounded-full"
             initial={{ width: 0 }}
             whileInView={{ width: `${skill.level}%` }}
             viewport={{ once: true }}
@@ -150,7 +183,7 @@ const Expertise = () => {
     <section 
       id="expertise" 
       
-      className="bg-dark-800 relative px-6 py-32 bg-gradient-to-b overflow-hidden"
+      className="bg-mono-800 relative px-6 py-32 bg-gradient-to-b overflow-hidden"
     >
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -164,10 +197,10 @@ const Expertise = () => {
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-full items-center'>
           <div className="col-left">
-            <h2 className="text-5xl md:text-6xl mb-6">
-            <span className="text-gradient-3d uppercase font-bold">Technical<br/>Expertise</span>
+            <h2 className="text-5xl md:text-7xl mb-6 uppercase font-bold">
+            <span className="text-gradient-3d">Technical</span><br/><span className='text-accent-sky'>Expertise</span>
           </h2>
-          <p className="text-lg md:text-xl text-light-200">
+          <p className="text-lg md:text-xl text-mono-100">
             Comprehensive skill set spanning frontend development, backend architecture, and creative design. 
             Constantly evolving with cutting-edge technologies.
           </p>
@@ -180,8 +213,8 @@ const Expertise = () => {
           viewport={{ once: true }}
           className="relative w-full lg:px-16"
         >
-          <div className="bg-dark-900 rounded-3xl p-8">
-            <h3 className="text-3xl font-display font-bold text-light-100 mb-8 text-center">
+          <div className="bg-mono-100/10 rounded-3xl p-8">
+            <h3 className="text-3xl font-display  text-mono-100 mb-8 text-center">
               Proficiency Overview
             </h3>
             
@@ -222,18 +255,18 @@ const Expertise = () => {
                       />
                       <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#E1FB4B" />
-                          <stop offset="100%" stopColor="#3A4A09" />
+                          <stop offset="0%" stopColor="#8ECAE6" />
+                          <stop offset="100%" stopColor="#1c1c1c" />
                         </linearGradient>
                       </defs>
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl  text-light-100">
+                      <span className="text-2xl  text-mono-100">
                         {Math.round(category.skills.reduce((acc, skill) => acc + skill.level, 0) / category.skills.length)}%
                       </span>
                     </div>
                   </div>
-                  <p className="text-light-100 ">{category.category}</p>
+                  <p className="text-mono-100 ">{category.category}</p>
                 </motion.div>
               ))}
             </div>
@@ -245,44 +278,65 @@ const Expertise = () => {
         
 
         {/* Skills grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
-        >
-          {skillsData.map((category, categoryIndex) => (
-            <motion.div
-              key={category.category}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="bg-dark-900 rounded-3xl p-6"
-            >
-              {/* Category header */}
-              <div className="flex items-center space-x-4 mb-8">
-                <div>
-                  <h3 className="text-2xl font-display text-light-100 font-bold">
-                    {category.category}
-                  </h3>
+        <div className="relative">
+          <motion.div
+            ref={scrollContainerRef}
+            onScroll={checkScrollability}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex overflow-x-auto pb-4"
+          >
+            {skillsData.map((category, categoryIndex) => (
+              <motion.div
+                key={category.category}
+                variants={itemVariants}
+                className="p-2 flex-shrink-0 w-full md:w-[50%]"
+              >
+                <div className='bg-mono-100/10 p-6 rounded-3xl'>
+                {/* Category header */}
+                <div className="flex items-center space-x-4 mb-8">
+                  <div>
+                    <h3 className="text-2xl font-display text-mono-100">
+                      {category.category}
+                    </h3>
+                  </div>
                 </div>
-              </div>
 
-              {/* Skills */}
-              <div className="grid grid-cols-2 gap-x-6 text-xs md:text-sm">
-                {category.skills.map((skill, skillIndex) => (
-                  <SkillBar 
-                    key={skill.name} 
-                    skill={skill} 
-                    index={skillIndex}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        
+                {/* Skills */}
+                <div className="grid grid-cols-2 gap-x-6 text-xs md:text-sm">
+                  {category.skills.map((skill, skillIndex) => (
+                    <SkillBar 
+                      key={skill.name} 
+                      skill={skill} 
+                      index={skillIndex}
+                    />
+                  ))}
+                </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+          {isScrollable && (
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={() => scroll('left')}
+                disabled={!canScrollLeft}
+                className="px-4 py-2 bg-mono-900 rounded-full disabled:opacity-50"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                disabled={!canScrollRight}
+                className="ml-2 px-4 py-2 bg-mono-900 rounded-full disabled:opacity-50"
+              >
+                &gt;
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

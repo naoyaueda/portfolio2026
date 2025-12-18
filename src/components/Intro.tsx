@@ -25,13 +25,15 @@ const Intro: React.FC = () => {
   };
 
   const skills = [
-    "JavaScript", "React", "TypeScript", "Node.js", "Tailwind CSS", "Python", "HTML/CSS", "PHP", "WordPress", "Branding", "Logo Design"
+    "JavaScript", "React", "TypeScript", "Node.js", "Tailwind CSS", "Python", "HTML/CSS", "PHP", "WordPress", "Branding", "Logo Design", "Digital Marketing", "Online Strategy"
   ];
 
   return (
-    <section id="about" className="py-32 px-6 bg-dark-800 border-b-2 border-dark-900 min-h-screen flex items-center">
+    <section id="about" className="py-32 px-6 text-mono-900 bg-mono-100 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl md:text-6xl text-gradient-3d uppercase mb-16 font-bold">About Me</h2>
+        <h2 className='text-5xl md:text-7xl uppercase font-bold md:text-center mb-16'>
+          <span className="text-gradient-3d-dark">About</span> <span className='text-accent-orange'>Me</span>
+        </h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -53,21 +55,20 @@ const Intro: React.FC = () => {
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 200, repeat: Infinity, ease: "linear" }}
-                      className="w-48 h-48 lg:mx-auto rounded-full flex items-center justify-center"
+                      className="w-48 h-48 lg:mx-auto rounded-full flex items-center justify-center mb-4"
                     >
                       <div><img src={avatar} alt='my avatar'/></div>
                     </motion.div>
+                    <div className='text-lg font-bold'>Naoya Ueda</div>
+                    <div>Multimedia Designer & Developer</div>
                   </div>
                 </div>
               </motion.div>
             </div>
             
           </motion.div>
-            <motion.div variants={itemVariants} className='space-y-4'>
-              <div className='text-lg font-bold'>Naoya Ueda</div>
-              <div>Multimedia Designer & Developer</div>
-              <p>Focused on clean, user-centered digital experiences. With expertise in WordPress, UI/UX, and workflow optimization, I build mobile-first websites that connect diverse audiences.</p>
-              <h3 className="text-lg text-yellow-500">Core Skills</h3>
+            <motion.div variants={itemVariants} className='space-y-6 text-mono-900'>
+              <h3 className='font-semibold text-lg'>Core Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <motion.span
@@ -76,12 +77,16 @@ const Intro: React.FC = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ scale: 1.1, rotate: 2 }}
-                    className="px-4 py-2 bg-dark-800 border border-gray-500/30 rounded-full text-sm text-light-200 hover:border-yellow-500 hover:text-yellow-500 transition-all duration-200"
+                    className="px-4 py-2 bg-mono-100 border border-accent-orange rounded-full text-sm text-accent-orange hover:bg-accent-orange hover:text-mono-100 transition-all duration-200"
                   >
                     {skill}
                   </motion.span>
                 ))}
               </div>
+              <p>Started in business, now working at the intersection of strategy, design, and development—building clear, mobile-first websites and smoother content workflows.</p>
+              <div><a href="/about">
+                <span className='hover:px-4 py-2 hover:bg-accent-orange hover:text-mono-100 transition-all duration-300 rounded-full'>Read the full story →</span>
+              </a></div>
             </motion.div>
 
         </motion.div>

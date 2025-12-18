@@ -23,10 +23,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="p-6 bg-black/50 relative overflow-hidden">
+    <footer className="bg-mono-900 relative overflow-hidden">
 
-      <div className="relative z-10 max-w-10xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+      <div className="relative z-10 max-w-10xl mx-auto pb-6 px-6">
+        <div className="grid md:grid-cols-4 gap-6 py-6">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -35,12 +35,12 @@ const Footer = () => {
             className="md:col-span-2 space-y-1"
           >
             <div className="flex items-center">
-                <span className='text-light-100 text-xl font-bold'>Naoya Ueda</span>
+                <span className='text-mono-100 text-xl'>Naoya Ueda</span>
             </div>
-            <div className="text-light-200 text-sm">
+            <div className="text-mono-200 text-sm">
               Multimedia Design & Development.
             </div>
-            <div className="text-light-300 text-sm">
+            <div className="text-mono-300 text-sm">
               Design with Purpose, Build with Clarity.
             </div>
           </motion.div>
@@ -53,13 +53,13 @@ const Footer = () => {
             transition={{ delay: 0.1 }}
             className="space-y-6"
           >
-            <h4 className="text-lg text-light-100">Menu</h4>
+            <h4 className="text-lg text-mono-100">Menu</h4>
             <nav className="space-y-3">
               {footerLinks.map((link) => (
                 <Link to={link.href} key={link.label}>
                   <motion.div
                     whileHover={{ scale: 1.05, x: 5 }}
-                     className="block text-light-300 hover:text-light-100 transition-colors duration-200"
+                     className="block text-mono-300 hover:text-mono-100 transition-colors duration-200"
                   >
                     {link.label}
                   </motion.div>
@@ -76,9 +76,9 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="space-y-6"
           >
-            <h4 className="text-lg text-light-100">Connect</h4>
+            <h4 className="text-lg text-mono-100">Connect</h4>
             <div className="space-y-3">
-              <p className="text-light-200 text-sm">
+              <p className="text-mono-200 text-sm">
                 Let's discuss our future collaborations!
               </p>
             <div className="flex space-x-4 pt-4">
@@ -95,7 +95,7 @@ const Footer = () => {
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.2}}
                   whileTap={{ scale: 0.9 }}
-                  className="w-auto h-10 px-5 bg-dark-800 border border-dark-600/30 rounded-full flex items-center justify-center text-light-100 hover:border-light-100 hover:bg-dark-600/10 transition-all duration-300"
+                  className="w-auto h-10 px-5 bg-mono-800 border border-mono-600/30 rounded-full flex items-center justify-center text-mono-100 hover:border-mono-100 hover:bg-mono-600/10 transition-all duration-300"
                 >
                   <span className="text-xs text-center">{social.label}</span>
                 </motion.a>
@@ -111,16 +111,16 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="pt-8 border-t border-dark-600 flex flex-col md:flex-row justify-between md:items-center space-y-4 md:space-y-0"
+          className="pt-8 border-t border-mono-600 flex flex-col md:flex-row justify-between md:items-center space-y-4 md:space-y-0"
         >
-          <div className="text-left text-light-300 text-sm">
+          <div className="text-left text-mono-300 text-sm">
               © {currentYear} Naoya Ueda. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-yellow-500 rounded-full animate-ping" />
-              <span className="text-light-300 text-sm">Available for work</span>
+              <div className="w-2 h-2 bg-accent-sky rounded-full animate-ping" />
+              <span className="text-mono-300 text-sm">Available for work</span>
             </div>
             
             {/* Scroll to top */}
@@ -128,7 +128,7 @@ const Footer = () => {
               onClick={scrollToTop}
               whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
-              className="w-10 h-10 bg-dark-600/20 border border-dark-600/30 rounded-full flex items-center justify-center text-light-300 hover:bg-light-500/30 transition-all duration-300"
+              className="w-10 h-10 bg-mono-600/20 border border-mono-600/30 rounded-full flex items-center justify-center text-mono-300 hover:bg-mono-500/30 transition-all duration-300"
               aria-label="Scroll to top"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

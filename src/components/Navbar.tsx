@@ -4,8 +4,8 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
+  { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -44,16 +44,16 @@ const Navbar: React.FC = () => {
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed bg-dark-900/95 items-center top-0 w-full h-auto z-50 px-6 py-2 backdrop-blur-custom"
+        className="fixed bg-mono-900 items-center top-0 w-full h-auto z-50 py-2 backdrop-blur-custom"
       >
-        <div className="text-sm flex justify-between items-center">
-          <Link to="/" className='text-sm text-white font-bold'>
+        <div className="text-sm flex justify-between items-center px-6">
+          <Link to="/" className='text-mono-100 font-bold'>
             Naoya Ueda
           </Link>
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 text-gray-400">
+          <div className="hidden md:flex space-x-6 text-mono-100">
             {navLinks.map((link) => (
-              <Link key={link.path} to={link.path} className={`hover:text-light-100 transition-colors ${location.pathname === link.path ? 'text-light-100 border-b border-light-300' : ''}`}>
+              <Link key={link.path} to={link.path} className={`hover:border-b hover:border-mono-100 transition-colors ${location.pathname === link.path ? 'text-mono-100 border-b border-mono-100' : ''}`}>
                 {link.name}
               </Link>
             ))}
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-dark-900 z-40 flex flex-col items-start justify-center p-8"
+            className="fixed inset-0 bg-mono-900 z-40 flex flex-col items-start justify-center p-8"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
                 <motion.div key={link.path} variants={linkVariants} className="my-4">
                   <Link
                     to={link.path}
-                    className={`text-4xl font-display text-light-100 hover:text-accent-yellow transition-colors ${location.pathname === link.path ? 'text-accent-yellow' : ''}`}
+                    className={`text-4xl font-bold uppercase text-mono-100 hover:text-accent-amber transition-colors ${location.pathname === link.path ? 'text-accent-orange' : ''}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
