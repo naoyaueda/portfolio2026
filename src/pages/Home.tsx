@@ -12,9 +12,9 @@ const Home: React.FC = () => {
  return (
     <div className="min-h-screen text-light-100 overflow-x-hidden">
         <Hero />
+        <Work limit={3} />
         <Intro />
         <Expertise />
-        <Work />
         <Connect />
         <Footer />
     </div>

@@ -36,10 +36,10 @@ const Connect = () => {
   ] as const;
 
   const socialLinks: SocialLink[] = [
-    { icon: 'Location', value: 'Calgary, AB, Canada', href: 'https://maps.app.goo.gl/c48gwxh3pJAuJGXw5' },
-    { icon: 'Email', value: 'hello@naoyaueda.com', href: 'mailto:hello@naoyaueda.com' },
-    { icon: 'LinkedIn', value: 'ID: naoyaueda', href: 'https://www.linkedin.com/in/naoyaueda/' },
-    { icon: 'GitHub', value: 'ID: naoyaueda', href: 'https://github.com/naoyaueda' },
+    { icon: 'C', value: 'Calgary, AB, Canada', href: 'https://maps.app.goo.gl/c48gwxh3pJAuJGXw5' },
+    { icon: 'E', value: 'Email me', href: 'mailto:hello@naoyaueda.com' },
+    { icon: 'L', value: 'My LinkedIn', href: 'https://www.linkedin.com/in/naoyaueda/' },
+    { icon: 'G', value: 'My GitHub', href: 'https://github.com/naoyaueda' },
   ];
 
   // Initialize EmailJS
@@ -152,7 +152,7 @@ const Connect = () => {
     <section 
       id="contact" 
       
-      className="bg-dark-800 relative py-32 px-6 bg-gradient-to-b overflow-hidden"
+      className="bg-mono-100 relative py-32 px-6 bg-gradient-to-b overflow-hidden"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header */}
@@ -163,10 +163,10 @@ const Connect = () => {
           className="mb-20"
         >
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl">
-            <span className="text-gradient-3d uppercase font-bold">Connect <br/>with me.</span>
+          <h2 className="text-5xl md:text-7xl uppercase font-bold">
+            <span className="text-gradient-3d-dark">Connect</span><br/><span className='text-accent-blue'>with me.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-light-200 flex items-center">
+          <p className="text-lg sm:text-xl text-mono-900 flex items-center">
             From complete web design and development to intuitive UI/UX, branding strategy, and technical consulting, I help bring your ideas to life with clarity and impact.
           </p>
           </div>
@@ -185,7 +185,7 @@ const Connect = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-dark-900 rounded-3xl p-6"
+            className="bg-accent-blue rounded-3xl p-6"
           >
             <h3 className="text-2xl font-display mb-8" >
               Let's explore how we can collaborate.
@@ -237,10 +237,10 @@ const Connect = () => {
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
+                      className={`w-full px-4 py-3 bg-mono-100 border rounded-xl text-mono-900 placeholder-mono-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
                         error && !formData.name.trim() 
                           ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
-                          : 'border-gray-500/30 focus:border-yellow-400 focus:ring-yellow-400/20'
+                          : 'border-gray-500/30 focus:border-accent-blue focus:ring-yellow-400/20'
                       } disabled:opacity-50`}
                       placeholder="Your Name"
                       minLength={2}
@@ -256,10 +256,10 @@ const Connect = () => {
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-                      className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
+                      className={`w-full px-4 py-3 bg-mono-100 border rounded-xl text-mono-900 placeholder-mono-200 focus:outline-none focus:ring-2 transition-all duration-300 ${
                         error && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
                           ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
-                          : 'border-dark-600/30 focus:border-yellow-400 focus:ring-yellow-400/20'
+                          : 'border-mono-600/30 focus:border-accent-blue focus:ring-yellow-400/20'
                       } disabled:opacity-50`}
                       placeholder="Email Address"
                       maxLength={100}
@@ -273,7 +273,7 @@ const Connect = () => {
                     value={formData.projectType}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-dark-700 border border-gray-500/30 rounded-xl text-light-100 focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 disabled:opacity-50"
+                    className="w-full px-4 py-3 bg-mono-100 border border-gray-500/30 rounded-xl text-mono-900 focus:outline-none focus:border-accent-blue focus:ring-2 focus:ring-accent-blue transition-all duration-300 disabled:opacity-50"
                   >
                     <option value="">Select Project Type</option>
                     {projectTypes.map(type => (
@@ -292,14 +292,14 @@ const Connect = () => {
                     rows={6}
                     minLength={10}
                     maxLength={1000}
-                    className={`w-full px-4 py-3 bg-dark-700 border rounded-xl text-white placeholder-light-200 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
+                    className={`w-full px-4 py-3 bg-mono-100 border rounded-xl text-mono-900 placeholder-mono-200 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
                       error && (formData.message.length < 10 || formData.message.length > 1000)
                         ? 'border-red-400 focus:border-red-400 focus:ring-red-400/20' 
-                        : 'border-gray-500/30 focus:border-yellow-400 focus:ring-yellow-400/20'
+                        : 'border-gray-500/30 focus:border-accent-blue focus:ring-yellow-400/20'
                     } disabled:opacity-50`}
                     placeholder="Tell me about your project (minimum 10 characters)..."
                   />
-                  <div className="text-right text-xs text-dark-600 mt-1">
+                  <div className="text-right text-xs text-mono-100 mt-1">
                     {formData.message.length}/1000 characters
                   </div>
                 </div>
@@ -307,11 +307,11 @@ const Connect = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full py-4 bg-mono-100/50 text-black font-semibold rounded-xl hover:bg-mono-100/70 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center">
-                      <div className="w-5 h-5 border-2 border-dark-900 border-t-transparent rounded-full mr-2 animate-spin" />
+                      <div className="w-5 h-5 border-2 border-mono-900 border-t-transparent rounded-full mr-2 animate-spin" />
                       Sending Message...
                     </span>
                   ) : (
@@ -330,8 +330,8 @@ const Connect = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-dark-900 rounded-3xl p-6 sm:p-8 lg:p-10">
-              <h3 className="text-2xl font-display text-light-100 mb-8">
+            <div className="bg-accent-blue rounded-3xl p-6">
+              <h3 className="text-2xl text-mono-100 mb-8">
                 Connect Directly
               </h3>
               
@@ -342,15 +342,15 @@ const Connect = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center rounded-full pr-4 hover:bg-dark-700 transition-all duration-300 group"
+                    className="flex items-center rounded-full pr-4 hover:bg-mono-100/20 transition-all duration-300 group"
                   >
-                    <div className="text-sm bg-dark-700 rounded-full p-3 mr-3">
+                    <div className=" bg-mono-100/20 rounded-full w-12 h-12 flex justify-center items-center mr-3 text-mono-100 hover:bg-transparent">
                       {link.icon}
                     </div>
-                    <div className="flex-1 text-light-300 group-hover:text-white transition-colors">
+                    <div className="flex-1 group-hover:text-white transition-colors">
                       {link.value}
                     </div>
-                    <div className="text-yellow-500 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
+                    <div className="opacity-20 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
                       →
                     </div>
                   </a>
@@ -367,37 +367,37 @@ const Connect = () => {
             className="mt-12 sm:mt-16"
           >
             <div className="flex items-center space-x-4 mb-6">
-              <h4 className="text-2xl sm:text-3xl text-light-100">Open for Opportunities</h4>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full animate-ping" />
+              <h4 className="text-2xl sm:text-3xl text-mono-900">Open for Opportunities</h4>
+              <div className="w-3 h-3 bg-accent-sky rounded-full animate-ping" />
             </div>
             
-            <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
+            <div className="flex flex-wrap gap-2 mb-8 text-mono-900">
+              <span className="px-3 py-1 bg-mono-900/10 rounded-full text-sm">
                 Remote Friendly
               </span>
-              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
+              <span className="px-3 py-1 bg-mono-900/10 rounded-full text-sm">
                 Full-time Available
               </span>
-              <span className="px-3 py-1 bg-dark-900 text-light-200 rounded-full text-sm">
+              <span className="px-3 py-1 bg-mono-900/10 rounded-full text-sm">
                 Global Clients
               </span>
             </div>
             
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 text-light-300'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 text-mono-900'>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>Web Development</h5>
+                <h5 className='text-lg mb-3 border-l-4 border-accent-blue pl-4'>Web Development</h5>
                 <p className='text-sm leading-relaxed'>Full-stack development, UI/UX design, and technical consulting from concept to deployment.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>Brand Identity</h5>
+                <h5 className='text-lg mb-3 border-l-4 border-accent-blue pl-4'>Brand Identity</h5>
                 <p className='text-sm leading-relaxed'>Unique logos and brand identities that resonate with your target audience.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>WordPress Development</h5>
+                <h5 className='text-lg mb-3 border-l-4 border-accent-blue pl-4'>WordPress Development</h5>
                 <p className='text-sm leading-relaxed'>Custom themes tailored to your needs with engaging user experiences.</p>
               </div>
               <div>
-                <h5 className='text-lg text-light-100 mb-3 border-l-4 border-yellow-500 pl-4'>AI Integration</h5>
+                <h5 className='text-lg mb-3 border-l-4 border-accent-blue pl-4'>AI Integration</h5>
                 <p className='text-sm leading-relaxed'>Leveraging AI to create innovative solutions and reach new possibilities.</p>
               </div>
             </div>

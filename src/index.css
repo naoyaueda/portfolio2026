@@ -13,7 +13,7 @@
     background: #1c1c1c;
     color: f5f5f5;
     font-family: 'Montserrat', 'system-ui', 'sans-serif';
-    font-weight:300;
+    font-weight:400;
     overflow-x: hidden;
   }
   
@@ -159,12 +159,23 @@
   }
 }
 
-/* Section width */
-.max-w-10xl {
-  max-width: 1920px;
-}
+.story-border {
+--radius: 5px;
 
-.bg-hero {
-  background: url('assets/images/bg.png') no-repeat;
-  background-position: center;
+  background-image: 
+    radial-gradient(
+      var(--radius),
+      transparent 98%,
+      white
+    ),
+    linear-gradient(white 0 0);
+  background-repeat: 
+    round, 
+    no-repeat;
+  background-position:
+    calc(var(--radius) * -1.5) calc(var(--radius) * -1.5),
+    50%;
+  background-size:
+    calc(var(--radius) * 3) calc(var(--radius) * 3),
+    calc(100% - var(--radius) * 3) calc(100% - var(--radius) * 3);
 }
