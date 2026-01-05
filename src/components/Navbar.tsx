@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import Logo from '../assets/images/logo.png';
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -44,12 +45,13 @@ const Navbar: React.FC = () => {
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed bg-mono-900 items-center top-0 w-full h-auto z-50 py-2 backdrop-blur-custom"
+        className="fixed bg-mono-900 items-center top-0 w-full h-auto z-50 py-2"
       >
         <div className="text-sm flex justify-between items-center px-6">
-          <Link to="/" className='text-mono-100 font-bold'>
-            Naoya Ueda
-          </Link>
+            <Link to="/" className='text-mono-100 uppercase font-bold flex flex-row items-center gap-2'>
+              <img src={Logo} className='h-6 w-6' alt='logo'/>
+              Naoya Ueda
+            </Link>
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 text-mono-100">
             {navLinks.map((link) => (
