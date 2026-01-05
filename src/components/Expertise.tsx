@@ -196,7 +196,7 @@ const Expertise = () => {
         >
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-full items-center'>
-          <div className="col-left">
+          <div>
             <h2 className="text-5xl md:text-7xl mb-6 uppercase font-bold">
             <span className="text-gradient-3d">Technical</span><br/><span className='text-accent-sky'>Expertise</span>
           </h2>
@@ -205,15 +205,15 @@ const Expertise = () => {
             Constantly evolving with cutting-edge technologies.
           </p>
           </div>
-          <div className="col-right">
+          <div>
         {/* Expertise visualization */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative w-full lg:px-16"
+          className="relative w-full mt-10 md:mt-0"
         >
-          <div className="bg-mono-100/10 rounded-3xl p-8">
+          <div className="bg-mono-800 rounded-3xl">
             <h3 className="text-3xl font-display  text-mono-100 mb-8 text-center">
               Proficiency Overview
             </h3>
@@ -292,11 +292,11 @@ const Expertise = () => {
               <motion.div
                 key={category.category}
                 variants={itemVariants}
-                className="p-2 flex-shrink-0 w-full md:w-[50%]"
+                className="p-2 md:p-4 flex-shrink-0 w-full md:w-[50%]"
               >
-                <div className='bg-mono-100/10 p-6 rounded-3xl'>
+                <div className='bg-mono-800 rounded-3xl'>
                 {/* Category header */}
-                <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center mb-8">
                   <div>
                     <h3 className="text-2xl font-display text-mono-100">
                       {category.category}

@@ -172,7 +172,7 @@ const Work: React.FC<WorkProps> = ({ limit }) => {
           </div>
 
           {/* Bottom half - Text content */}
-          <div className="flex-1 bg-mono-100/10 p-6 flex flex-col justify-between">
+          <div className="flex-1 bg-mono-900 p-6 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-display text-mono-100 mb-3 transition-colors duration-300">
                 {project.title}
@@ -216,14 +216,14 @@ const Work: React.FC<WorkProps> = ({ limit }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-mono-100/10 backdrop-blur-md flex items-center justify-center p-8"
+        className="fixed inset-0 z-50 bg-mono-100/10 backdrop-blur-md flex items-center justify-center p-4"
         onClick={() => setSelectedProject(null)}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
-          className="bg-mono-800 rounded-3xl container w-full max-h-[90vh] overflow-y-auto"
+          className="bg-mono-900 rounded-3xl container w-full max-h-[90vh] overflow-y-auto"
           onClick={(e: React.MouseEvent) => e.stopPropagation()} // Type 'e'
         >
           <div className="p-8">

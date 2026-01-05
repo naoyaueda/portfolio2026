@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/images/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,16 +33,14 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-2 space-y-1"
+            className="md:col-span-2 space-y-4"
           >
-            <div className="flex items-center">
-                <span className='text-mono-100 text-xl'>Naoya Ueda</span>
+            <div className="flex items-center gap-2">
+                <img src={Logo} className='h-6 w-6' alt="logo"/><span className='text-mono-100 text-lg font-bold uppercase'>Naoya Ueda</span>
             </div>
-            <div className="text-mono-200 text-sm">
-              Multimedia Design & Development.
-            </div>
-            <div className="text-mono-300 text-sm">
-              Design with Purpose, Build with Clarity.
+            <div className="text-sm">
+              <p className='text-mono-200 '>Multimedia Design & Development.</p>
+              <p className='text-mono-300 '>Design with Purpose, Build with Clarity.</p>
             </div>
           </motion.div>
 
@@ -51,9 +50,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <h4 className="text-lg text-mono-100">Menu</h4>
+            <h4 className="text-lg text-mono-100 font-bold uppercase">Menu</h4>
             <nav className="space-y-3">
               {footerLinks.map((link) => (
                 <Link to={link.href} key={link.label}>
@@ -74,9 +73,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <h4 className="text-lg text-mono-100">Connect</h4>
+            <h4 className="text-lg text-mono-100 font-bold uppercase">Connect</h4>
             <div className="space-y-3">
               <p className="text-mono-200 text-sm">
                 Let's discuss our future collaborations!
