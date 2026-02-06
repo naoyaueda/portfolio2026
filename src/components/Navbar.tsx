@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden z-50 -mt-2">
+          <div className="md:hidden z-50">
             <button onClick={toggleMenu} className="focus:outline-none">
               <motion.div
                 className="w-6 h-6 flex flex-col justify-around"
