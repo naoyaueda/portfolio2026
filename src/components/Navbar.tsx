@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               Naoya Ueda
             </Link>
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 text-mono-100">
+          <div className="hidden lg:flex space-x-6 text-mono-100">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} className={`hover:border-b hover:border-mono-100 transition-colors ${location.pathname === link.path ? 'text-mono-100 border-b border-mono-100' : ''}`}>
                 {link.name}
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden z-50">
+          <div className="lg:hidden z-50">
             <button onClick={toggleMenu} className="focus:outline-none">
               <motion.div
                 className="w-6 h-6 flex flex-col justify-around"
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
                 <motion.div key={link.path} variants={linkVariants} className="my-4">
                   <Link
                     to={link.path}
-                    className={`text-4xl font-bold uppercase text-mono-100 hover:text-accent-amber transition-colors ${location.pathname === link.path ? 'text-accent-orange' : ''}`}
+                    className={`text-5xl font-bold uppercase text-mono-100 hover:text-accent-amber transition-colors ${location.pathname === link.path ? 'text-accent-orange' : ''}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}

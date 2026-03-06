@@ -44,3 +44,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## EmailJS Configuration
+
+The contact form requires [EmailJS](https://www.emailjs.com/) to be configured properly.
+
+1. Create a `.env` file in the root directory (you can use `.env.example` as a template).
+2. Fill in the following variables with your EmailJS credentials:
+   - `REACT_APP_EMAILJS_SERVICE_ID`
+   - `REACT_APP_EMAILJS_TEMPLATE_ID`
+   - `REACT_APP_EMAILJS_PUBLIC_KEY`
+3. Restart the development server to apply the changes.

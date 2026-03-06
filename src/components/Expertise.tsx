@@ -197,10 +197,10 @@ const Expertise = () => {
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-full items-center'>
           <div>
-            <h2 className="text-5xl md:text-7xl mb-6 uppercase font-bold">
+            <h2 className="text-5xl lg:text-7xl mb-6 uppercase font-bold">
             <span className="text-gradient-3d">Technical</span><br/><span className='text-accent-sky'>Expertise</span>
           </h2>
-          <p className="text-lg md:text-xl text-mono-100">
+          <p className="text-lg lg:text-xl text-mono-100">
             Comprehensive skill set spanning frontend development, backend architecture, and creative design. 
             Constantly evolving with cutting-edge technologies.
           </p>
@@ -211,7 +211,7 @@ const Expertise = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative w-full mt-10 md:mt-0"
+          className="relative w-full mt-10 lg:mt-0"
         >
           <div className="bg-mono-800 rounded-3xl">
             <h3 className="text-3xl font-display  text-mono-100 mb-8 text-center">
@@ -292,7 +292,7 @@ const Expertise = () => {
               <motion.div
                 key={category.category}
                 variants={itemVariants}
-                className="p-2 md:p-4 flex-shrink-0 w-full md:w-[50%]"
+                className="p-2 lg:p-4 flex-shrink-0 w-full lg:w-[50%]"
               >
                 <div className='bg-mono-800 rounded-3xl'>
                 {/* Category header */}
@@ -305,7 +305,7 @@ const Expertise = () => {
                 </div>
 
                 {/* Skills */}
-                <div className="grid grid-cols-2 gap-x-6 text-xs md:text-sm">
+                <div className="grid grid-cols-2 gap-x-6 text-xs lg:text-sm">
                   {category.skills.map((skill, skillIndex) => (
                     <SkillBar 
                       key={skill.name} 

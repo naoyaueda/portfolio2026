@@ -109,7 +109,7 @@ const Connect = () => {
       const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
-        throw new Error('EmailJS configuration missing');
+        throw new Error('EmailJS configuration missing. Please ensure REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, and REACT_APP_EMAILJS_PUBLIC_KEY are set in your .env file.');
       }
 
       // Prepare template parameters
@@ -163,7 +163,7 @@ const Connect = () => {
           className="mb-20"
         >
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
-          <h2 className="text-5xl md:text-7xl uppercase font-bold">
+          <h2 className="text-5xl lg:text-7xl uppercase font-bold">
             <span className="text-gradient-3d-dark">Connect</span><br/><span className='text-accent-blue'>with me.</span>
           </h2>
           <p className="text-lg sm:text-xl text-mono-900 flex items-center">

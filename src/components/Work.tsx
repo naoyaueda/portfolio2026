@@ -240,7 +240,7 @@ const Work: React.FC<WorkProps> = ({ limit }) => {
                 ✕
               </button>
             </div>
-            <div className='md:flex items-center gap-12'>
+            <div className='lg:flex items-center gap-12'>
             <div className="flex-1 rounded-2xl mb-6 overflow-hidden">
               <img
                 src={selectedProject.image}
@@ -301,9 +301,9 @@ const Work: React.FC<WorkProps> = ({ limit }) => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           <div className="col-left">
-          <h2 className="text-5xl md:text-6xl font-bold uppercase">
+          <h2 className="text-5xl lg:text-7xl font-bold uppercase">
             <span className="text-gradient-3d">Featured</span><br/>
             <span className='text-accent-amber'>Projects</span>
           </h2>
@@ -336,7 +336,7 @@ const Work: React.FC<WorkProps> = ({ limit }) => {
         </motion.div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div className="grid lg:grid-cols-2 lg:grid-cols-3 gap-16">
           {filteredProjects.slice(0, limit).map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
