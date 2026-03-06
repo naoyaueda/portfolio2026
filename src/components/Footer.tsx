@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    { label: 'Home', href: '/'},
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Projects', href: '/projects' },
     { label: 'Contact', href: '/contact' },
@@ -27,19 +27,19 @@ const Footer = () => {
     <footer className="bg-mono-900 relative overflow-hidden">
 
       <div className="relative z-10 max-w-10xl mx-auto pb-6 px-6">
-        <div className="grid md:grid-cols-4 gap-6 py-6">
+        <div className="grid lg:grid-cols-4 gap-6 py-6">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-2 space-y-4"
+            className="lg:col-span-2 space-y-4"
           >
             <div className="flex items-center gap-2">
-                <img src={Logo} className='h-6 w-6' alt="logo"/><span className='text-mono-100 text-lg font-bold uppercase'>Naoya Ueda</span>
+              <img src={Logo} className='h-6 w-6' alt="logo" /><span className='text-mono-100 text-md font-bold uppercase'>Naoya Ueda</span>
             </div>
             <div className="text-sm">
-              <p className='text-mono-200 '>Multimedia Design & Development.</p>
+              <p className='text-mono-200 '>Digital Experience Specialist</p>
               <p className='text-mono-300 '>Design with Purpose, Build with Clarity.</p>
             </div>
           </motion.div>
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Link to={link.href} key={link.label}>
                   <motion.div
                     whileHover={{ scale: 1.05, x: 5 }}
-                     className="block text-mono-300 hover:text-mono-100 transition-colors duration-200"
+                    className="block text-mono-300 hover:text-mono-100 transition-colors duration-200"
                   >
                     {link.label}
                   </motion.div>
@@ -80,26 +80,26 @@ const Footer = () => {
               <p className="text-mono-200 text-sm">
                 Let's discuss our future collaborations!
               </p>
-            <div className="flex space-x-4 pt-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.2}}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-auto h-10 px-5 bg-mono-800 border border-mono-600/30 rounded-full flex items-center justify-center text-mono-100 hover:border-mono-100 hover:bg-mono-600/10 transition-all duration-300"
-                >
-                  <span className="text-xs text-center">{social.label}</span>
-                </motion.a>
-              ))}
-            </div>
+              <div className="flex space-x-4 pt-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-auto h-10 px-5 bg-mono-800 border border-mono-600/30 rounded-full flex items-center justify-center text-mono-100 hover:border-mono-100 hover:bg-mono-600/10 transition-all duration-300"
+                  >
+                    <span className="text-xs text-center">{social.label}</span>
+                  </motion.a>
+                ))}
+              </div>
 
             </div>
           </motion.div>
@@ -110,18 +110,18 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="pt-8 border-t border-mono-600 flex flex-col md:flex-row justify-between md:items-center space-y-4 md:space-y-0"
+          className="pt-8 border-t border-mono-600 flex flex-col lg:flex-row justify-between lg:items-center space-y-4 lg:space-y-0"
         >
           <div className="text-left text-mono-300 text-sm">
-              © {currentYear} Naoya Ueda. All rights reserved.
+            © {currentYear} Naoya Ueda. All rights reserved.
           </div>
-          
+
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-accent-sky rounded-full animate-ping" />
               <span className="text-mono-300 text-sm">Available for work</span>
             </div>
-            
+
             {/* Scroll to top */}
             <motion.button
               onClick={scrollToTop}
